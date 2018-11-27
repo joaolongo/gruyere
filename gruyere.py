@@ -123,7 +123,7 @@ def main():
     server_name = os.popen('hostname').read().replace('\n', '')  # DO NOT CHANGE
   else:                                                          # DO NOT CHANGE
     server_name = '127.0.0.1'                                    # DO NOT CHANGE
-  server_port = 80                                               # DO NOT CHANGE
+  server_port = 8088                                             # DO NOT CHANGE
 
   # The unique id is created from a CSPRNG.
   try:                                                           # DO NOT CHANGE
