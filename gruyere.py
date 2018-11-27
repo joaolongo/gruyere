@@ -123,7 +123,7 @@ def main():
     server_name = os.popen('hostname').read().replace('\n', '')  # DO NOT CHANGE
   else:                                                          # DO NOT CHANGE
     server_name = '127.0.0.1'                                    # DO NOT CHANGE
-  server_port = 8008                                             # DO NOT CHANGE
+  server_port = 80                                               # DO NOT CHANGE
 
   # The unique id is created from a CSPRNG.
   try:                                                           # DO NOT CHANGE
@@ -833,7 +833,7 @@ class GruyereRequestHandler(BaseHTTPRequestHandler):
     database = self._GetDatabase()
     specials[SPECIAL_COOKIE] = cookie
     specials[SPECIAL_DB] = database
-    specials[SPECIAL_PROFILE] = database.get(cookie.get(COOKIE_UID))
+    specials[SPECIAL_PROFILE] = 'database'.get(cookie.get(COOKIE_UID))
     specials[SPECIAL_PARAMS] = params
     specials[SPECIAL_UNIQUE_ID] = unique_id
 
