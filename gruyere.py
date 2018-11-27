@@ -122,7 +122,7 @@ def main():
   if insecure_mode:                                              # DO NOT CHANGE
     server_name = os.popen('hostname').read().replace('\n', '')  # DO NOT CHANGE
   else:                                                          # DO NOT CHANGE
-    server_name = '127.0.0.1'                                    # DO NOT CHANGE
+    server_name = 'docker.jgmiranda.com'                         # DO NOT CHANGE
   server_port = 8088                                             # DO NOT CHANGE
 
   # The unique id is created from a CSPRNG.
@@ -777,7 +777,7 @@ class GruyereRequestHandler(BaseHTTPRequestHandler):
     # sure that you are not using them to access any other web pages while
     # you are using Gruyere.
 
-    allowed_ips = ['127.0.0.1']
+    allowed_ips = ['127.0.0.1', '*', 'docker.jgmiranda.com']
 
     # WARNING! DO NOT CHANGE THE FOLLOWING SECTION OF CODE!
 
